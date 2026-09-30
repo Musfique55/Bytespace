@@ -1,6 +1,7 @@
 import CategoryPills from "@/components/category/CategoryPills";
 import CourseGrid from "@/components/courses/Courses";
 import CreatorBanner from "@/components/creatorBanner/CreatorBanner";
+import Footer from "@/components/footer/Footer";
 import LearningPaths from "@/components/learningPaths/LearningPaths";
 import Sponsors from "@/components/sponsors/Sponsors";
 import Testimonials from "@/components/testimonials/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <LearningPaths />
       <CreatorBanner />
       <Testimonials />
+      <Footer />
     </main>
   );
 }
