@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Button from "../shared/Button";
+
 export default function CreatorBanner() {
   return (
     <section
@@ -9,11 +12,12 @@ export default function CreatorBanner() {
         backgroundSize: "120px 120px",
       }}
     >
-      <img
+      <Image
         src={"/assets/creator-banner.png"}
-        alt=""
+        alt="creator-banner"
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
+        fill
+        className="pointer-events-none absolute object-cover object-center"
       />
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-20 text-center sm:py-24">
         <h2 className="font-semibold leading-tight max-w-2xl">
@@ -28,12 +32,9 @@ export default function CreatorBanner() {
           course on the ByteSpace Course Library.
         </p>
 
-        <button
-          type="button"
-          className="mt-8 bg-[#D4FB20] rounded-full px-6 py-2.5 text-sm font-medium text-[#242528] transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white cursor-pointer"
-        >
+        <Button className="mt-8" type="button">
           Join as Creator
-        </button>
+        </Button>
       </div>
     </section>
   );

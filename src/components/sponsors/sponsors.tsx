@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const sponsors = [
-  "/assets/sponsors/Frame.png",
-  "/assets/sponsors/Frame (1).png",
-  "/assets/sponsors/Frame (2).png",
-  "/assets/sponsors/Frame (3).png",
-  "/assets/sponsors/Frame (4).png",
+  "/assets/sponsors/Frame.svg",
+  "/assets/sponsors/Frame (1).svg",
+  "/assets/sponsors/Frame (2).svg",
+  "/assets/sponsors/Frame (3).svg",
+  "/assets/sponsors/Frame (4).svg",
 ];
 
 export default function Sponsors() {
@@ -17,7 +17,7 @@ export default function Sponsors() {
           src={sponsor}
           alt="sponsor"
           width={170}
-          height={100}
+          height={42}
         />
       ))}
     </div>
