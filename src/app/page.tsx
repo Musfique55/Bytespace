@@ -1,3 +1,9 @@
+import CategoryPills from "@/components/CategoryPills";
+
 export default function Home() {
-  return <div>home</div>;
+  return (
+    <main className="max-w-7xl mx-auto">
+      <CategoryPills />
+    </main>
+  );
 }
