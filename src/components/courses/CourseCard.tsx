@@ -3,7 +3,12 @@ import Avatar from "./Avatar";
 import Pill from "./Pills";
 import Image from "next/image";
 
-const AVATAR_COLORS = ["#f472b6", "#a3a3a3", "#fbbf24", "#60a5fa"];
+const AVATAR_IMAGES = [
+  "/assets/avatars/3fe559181733e0fb69226caee836e40092facb44.png",
+  "/assets/avatars/0577f0e9b7fca2f32639871454da0de95f951709.png",
+  "/assets/avatars/b44979e1c98ecb3ec92ac86805fe55581fbeaa60.png",
+  "/assets/avatars/d0cd3adb501c64c1b4cf766de6abb9fe8925fb5f.png",
+];
 
 export default function CourseCard({ course }: { course: any }) {
   return (
@@ -49,7 +54,7 @@ export default function CourseCard({ course }: { course: any }) {
           <ChartNoAxesColumnIncreasing size={20} strokeWidth={3} />
           {course.level}
         </span>
-        <Avatar count={course.students} avatar_colors={AVATAR_COLORS} />
+        <Avatar count={course.students} avatar_images={AVATAR_IMAGES} />
       </div>
 
       <p className="mt-4">
