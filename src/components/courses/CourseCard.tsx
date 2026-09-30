@@ -12,10 +12,7 @@ const AVATAR_IMAGES = [
 
 export default function CourseCard({ course }: { course: any }) {
   return (
-    <article
-      className="bg-white rounded-2xl p-3"
-      style={{ border: "1px dashed #93c5fd" }}
-    >
+    <article className="bg-white rounded-2xl p-3 border border-[#E5E7EB]">
       <div className="relative rounded-xl overflow-hidden h-48">
         {course.image && (
           <Image

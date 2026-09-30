@@ -1,6 +1,7 @@
 import CategoryPills from "@/components/category/CategoryPills";
 import CourseGrid from "@/components/courses/Courses";
-import Sponsors from "@/components/sponsors/sponsors";
+import LearningPaths from "@/components/learningPaths/LearningPaths";
+import Sponsors from "@/components/sponsors/Sponsors";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Sponsors />
       <CategoryPills />
       <CourseGrid />
+      <LearningPaths />
     </main>
   );
 }
