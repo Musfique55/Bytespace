@@ -1,5 +1,5 @@
-import { Star } from "lucide-react";
-import Avatar from "../courses/Avatar";
+import AvatarGroup from "@/components/shared/AvatarGroup";
+import StarRating from "@/components/shared/StarRating";
 
 const AVATAR_IMAGES = [
   "/assets/stats/creators/1e078348a54489bfd231d82fe1944770883c8d80.png",
@@ -13,34 +13,16 @@ const AVATAR_IMAGES = [
 
 export default function HappyStudentsCard() {
   return (
-    <div className="w-64 rounded-xl bg-white p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+    <div className="w-64 rounded-xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
       <p
         style={{ fontSize: "16px", lineHeight: "24px" }}
         className="font-semibold text-gray-900"
       >
         Happy Students
       </p>
-      <p
-        style={{ fontWeight: "700", fontSize: "10px" }}
-        className=" text-[#242528] flex items-center gap-1"
-      >
-        4.5
-        <span
-          style={{ fontWeight: "400" }}
-          className="text-inherit flex items-center gap-1"
-        >
-          (240){" "}
-          <Star
-            height={16}
-            width={16}
-            fill="#D4FB20"
-            color="#D4FB20"
-            className="inline-block "
-          />
-        </span>
-      </p>
+      <StarRating rating="4.5" count="240" starSize={16} starFill="#D4FB20" />
       <div className="mt-2 flex items-center">
-        <Avatar avatar_images={AVATAR_IMAGES} count={1} />
+        <AvatarGroup avatarImages={AVATAR_IMAGES} count={1} />
       </div>
     </div>
   );

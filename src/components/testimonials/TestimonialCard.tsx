@@ -3,7 +3,7 @@ import { Testimonial } from "./Testimonials";
 
 export default function TestimonialCard({ t }: { t: Testimonial }) {
   return (
-    <figure className="rounded-2xl bg-white p-5 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+    <figure className="rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
       <Avatar t={t} />
       <figcaption className="mt-4">
         <p

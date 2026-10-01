@@ -1,6 +1,7 @@
-import { ChartNoAxesColumnIncreasing, Star } from "lucide-react";
-import Avatar from "./Avatar";
-import Pill from "./Pills";
+import { ChartNoAxesColumnIncreasing } from "lucide-react";
+import AvatarGroup from "@/components/shared/AvatarGroup";
+import Pill from "@/components/shared/Pill";
+import StarRating from "@/components/shared/StarRating";
 import Image from "next/image";
 
 const AVATAR_IMAGES = [
@@ -12,7 +13,7 @@ const AVATAR_IMAGES = [
 
 export default function CourseCard({ course }: { course: any }) {
   return (
-    <article className="bg-white rounded-2xl p-3 border border-[#E5E7EB]">
+    <article className="rounded-2xl p-3 border border-[#E5E7EB]">
       <div className="relative rounded-xl overflow-hidden h-48">
         {course.image && (
           <Image
@@ -36,10 +37,7 @@ export default function CourseCard({ course }: { course: any }) {
         <h3 className="text-base font-semibold text-gray-900 truncate">
           {course.title}
         </h3>
-        <span className="flex items-center gap-1 text-sm text-[#4F4F4F] shrink-0">
-          {course.rating}
-          <Star size={13} fill="#d1d5db" stroke="#d1d5db" />
-        </span>
+        <StarRating rating={course.rating} starSize={13} starFill="#d1d5db" />
       </div>
 
       <p style={{ fontSize: "12px" }} className=" text-gray-500 mt-0.5">
@@ -51,7 +49,7 @@ export default function CourseCard({ course }: { course: any }) {
           <ChartNoAxesColumnIncreasing size={20} strokeWidth={3} />
           {course.level}
         </span>
-        <Avatar count={course.students} avatar_images={AVATAR_IMAGES} />
+        <AvatarGroup count={course.students} avatarImages={AVATAR_IMAGES} />
       </div>
 
       <p className="mt-4">

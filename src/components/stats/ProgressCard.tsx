@@ -1,6 +1,8 @@
+import ProgressBar from "@/components/shared/ProgressBar";
+
 export default function ProgressCard() {
   return (
-    <div className="min-w-59.25 rounded-2xl bg-white p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+    <div className="min-w-59.25 rounded-2xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
       <p
         style={{ fontSize: "14px", fontWeight: "500" }}
         className=" text-[#242528]"
@@ -18,9 +20,7 @@ export default function ProgressCard() {
       >
         55%
       </p>
-      <div className="mt-2 h-1.5 w-full rounded-full bg-gray-200">
-        <div className="h-full rounded-full bg-[#D9F34A]" />
-      </div>
+      <ProgressBar progress={55} className="mt-2" />
     </div>
   );
 }
