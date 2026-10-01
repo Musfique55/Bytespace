@@ -1,4 +1,6 @@
 import TestimonialCard from "./TestimonialCard";
+import GlowEffect from "@/components/shared/GlowEffect";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 export type Testimonial = {
   id: string;
@@ -39,32 +41,16 @@ export default function Testimonials() {
   return (
     <section className="relative overflow-hidden bg-[#FAFAFA] px-6 py-16 sm:py-20">
       {/* soft background glows */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-50 top-20 h-140 w-105 rounded-full blur-2xl bg-[#CBFC01]/20"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-10 left-137.5 h-105 w-60 rounded-full blur-2xl bg-[#CBFC01]/30"
-      />
-
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-32 -left-24 h-95 w-95 rounded-full blur-2xl bg-[#003BE2]/20"
-      />
+      <GlowEffect className="-right-50 top-20 h-140 w-105 bg-[#CBFC01]/20" />
+      <GlowEffect className="top-10 left-137.5 h-105 w-60 bg-[#CBFC01]/30" />
+      <GlowEffect className="-bottom-32 -left-24 h-95 w-95 bg-[#003BE2]/20" />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-          <h2 className="text-black">Discover What Our Community Is Saying</h2>
-          <p className="text-[#4F4F4F]">
-            At ByteSpace, our vibrant community of learners and creators is at
-            the heart of what we do. Hear directly from those who have
-            experienced the transformative journey of learning and creating on
-            our platform. Explore testimonials that reflect the diverse
-            perspectives of enthusiastic learners and accomplished creators.
-          </p>
-        </div>
+        <SectionHeader
+          align="grid"
+          title="Discover What Our Community Is Saying"
+          description="At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators."
+        />
 
         <div className="mt-12 grid items-start gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (

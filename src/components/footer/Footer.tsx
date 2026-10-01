@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Button from "../shared/Button";
+import Input from "../shared/Input";
 import Link from "next/link";
 
 const LINK_COLUMNS: { id: string; links: { label: string; href: string }[] }[] =
@@ -80,14 +81,13 @@ export default function Footer() {
               <label htmlFor="footer-email" className="sr-only">
                 Email address
               </label>
-              <input
+              <Input
                 id="footer-email"
                 type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="h-13 w-full max-w-96 rounded-full border border-[#CED0D3] bg-white px-5 text-base font-mono text-gray-900 placeholder:text-[#242528] focus:outline-none"
               />
               <Button type="submit">Search</Button>
             </form>

@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import SectionHeader from "@/components/shared/SectionHeader";
+import Pill from "@/components/shared/Pill";
 
 const categories = [
   "Featured",
@@ -42,31 +44,32 @@ export default function CategoryPills() {
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 text-center">
-      <h2 className=" text-slate-900">
-        Discover Your Passion,
-        <br />
-        Build Your Skills
-      </h2>
-
-      <p className="mx-auto mb-8 mt-4 max-w-4xl text-[#82868E]">
-        At Bytespace Courses, we bring you closer to life-changing knowledge.
-        Explore a variety of courses across different fields, from technology to
-        the arts, and make a difference in your career and life.
-      </p>
+      <SectionHeader
+        title={
+          <>
+            Discover Your Passion,
+            <br />
+            Build Your Skills
+          </>
+        }
+        description="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
+        titleClassName="text-slate-900"
+        descriptionClassName="mx-auto mb-8 mt-4 max-w-4xl text-[#82868E]"
+      />
 
       <div className="flex flex-col gap-4">
         {visibleRows.map((row, i) => (
           <div key={i} className="flex flex-wrap justify-center gap-3">
             {row.map((name) => (
-              <button
+              <Pill
+                className="font-mono"
                 key={name}
+                variant="solid"
+                active={active === name}
                 onClick={() => setActive(name)}
-                className={`rounded-full px-5 py-2.5 text-base cursor-pointer text-[#4B4C53] transition-colors ${
-                  active === name ? "bg-[#D4FB20]" : "bg-[#F5F5F6] "
-                }`}
               >
                 {name}
-              </button>
+              </Pill>
             ))}
 
             {i === visibleRows.length - 1 && (
