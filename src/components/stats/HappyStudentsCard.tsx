@@ -13,10 +13,10 @@ const AVATAR_IMAGES = [
 
 export default function HappyStudentsCard() {
   return (
-    <div className="w-64 rounded-xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+    <div className="bg-white w-64 rounded-xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
       <p
         style={{ fontSize: "16px", lineHeight: "24px" }}
-        className="font-semibold text-gray-900"
+        className="font-semibold text-gray-900 text-start"
       >
         Happy Students
       </p>

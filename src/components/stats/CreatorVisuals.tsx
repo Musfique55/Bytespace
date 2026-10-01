@@ -26,7 +26,7 @@ export default function CreatorVisual({
         width={215}
         className="absolute -top-47.5 left-53.75 z-20 transform rotate-40"
       />
-      <div className="absolute -left-12.5 -top-53.5">
+      <div className="absolute left-0 -top-53.5">
         <RevenueCard />
       </div>
       <div className="absolute -bottom-33.75 right-0 z-30">

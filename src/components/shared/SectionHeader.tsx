@@ -7,6 +7,8 @@ export interface SectionHeaderProps {
   titleClassName?: string;
   descriptionClassName?: string;
   className?: string;
+  descriptionStyle?: Record<string, string>;
+  titleStyle?: Record<string, string>;
 }
 
 export default function SectionHeader({
@@ -15,14 +17,20 @@ export default function SectionHeader({
   align = "center",
   titleClassName = "",
   descriptionClassName = "",
+  descriptionStyle = {},
+  titleStyle = {},
   className = "",
 }: SectionHeaderProps) {
   if (align === "grid") {
     return (
-      <div className={`grid items-center gap-6 md:grid-cols-2 md:gap-12 ${className}`}>
+      <div
+        className={`grid items-center gap-6 md:grid-cols-2 md:gap-12 ${className}`}
+      >
         <h2 className={`text-black ${titleClassName}`}>{title}</h2>
         {description && (
-          <p className={`text-[#4F4F4F] ${descriptionClassName}`}>{description}</p>
+          <p className={`text-[#4F4F4F] ${descriptionClassName}`}>
+            {description}
+          </p>
         )}
       </div>
     );
@@ -31,10 +39,16 @@ export default function SectionHeader({
   const isCenter = align === "center";
 
   return (
-    <div className={`${isCenter ? "flex flex-col items-center text-center" : "text-left"} ${className}`}>
-      <h2 className={titleClassName}>{title}</h2>
+    <div
+      className={`${isCenter ? "flex flex-col items-center text-center" : "text-left"} ${className}`}
+    >
+      <h2 style={titleStyle} className={titleClassName}>
+        {title}
+      </h2>
       {description && (
-        <p className={descriptionClassName}>{description}</p>
+        <p style={descriptionStyle} className={descriptionClassName}>
+          {description}
+        </p>
       )}
     </div>
   );
