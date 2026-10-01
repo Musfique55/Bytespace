@@ -30,7 +30,7 @@ export default function Hero() {
         alt="3d-elements"
         fill
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full object-scale-down z-50"
+        className="pointer-events-none absolute inset-0 h-full w-full object-contain z-50"
       />
 
       {/* big lime circle behind the person */}
