@@ -88,6 +88,7 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                className="text-gray-900"
               />
               <Button type="submit">Search</Button>
             </form>
